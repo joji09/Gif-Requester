@@ -4,6 +4,7 @@
 const gifArea = document.getElementById("gif-area");
 const searchInput = document.getElementById("search");
 const searchForm = document.getElementById("search-form");
+const removeBtn = document.getElementById("remove");
 
 function addGif(data){
     const numResults = data.length;
@@ -32,3 +33,7 @@ searchForm.addEventListener("submit", async function(e) {
 
     addGif(response.data.data)
 })
+
+removeBtn.addEventListener('click', function(){
+    gifArea.innerHTML = '';
+});
